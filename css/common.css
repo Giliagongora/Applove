@@ -10,7 +10,7 @@
 .mt-0 {
   margin-top: 0;
 }
-
+/* Pone texto en mayusculas y poder reutilizar */
 .text-uppercase {
   text-transform: uppercase;
 }
