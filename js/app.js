@@ -4,10 +4,8 @@
 (function serv(){
 	/* crea un array.from de todo lo que devolvera el getElement para hacer un forEach,
 	en este caso llamo las imagenes por su class(uno)*/ 
-	var caja = array.form(document.getElementsByClassName("uno")); 
-
+	var caja = array.form(document.getElementsByClassName("col-4")); 
 	var modal = document.getElementById("Modal");
-
 	var elementoModal, close, img;
 	caja.forEach(function(caja){
 		box.addEventListener("click", function(){
@@ -19,9 +17,16 @@
 			modal.classList.remove("hide");
 			close = document.createElement("div");
 			close.classList.add("close");
-			
-		})
-	})
+			img = document.createElement("img");
+			img.setAttribute("src", "http://tojaeurope.com/gallery/Close-icon.png");
+			close.appendChild(img);
+			modal.appendChild(close);
+			close.addEventListener("click",function(){
+				modal.classList.add("hide");
+			});
+		});
+	});
+})();
 
 
  /*
